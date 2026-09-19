@@ -1,71 +1,117 @@
-<header class="site-header">
-  <!-- Top Branding Bar -->
-  <div class="brand-bar">
-    <img src="profile.jpg" alt="Mulusew Andualem Asemahagn" class="brand-avatar">
-    <span class="brand-name">Mulusew Andualem ASEMAHAGN</span>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mulusew Andualem ASEMAHAGN</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <ul class="nav-menu">
-      <!-- Active Item -->
-      <li class="nav-item active">
-        <a href="#home" class="nav-link">Home <span class="arrow">▼</span></a>
-      </li>
+  <!-- SITE HEADER & NAVIGATION -->
+  <header class="site-header">
+    <!-- Top Branding Bar -->
+    <div class="brand-bar">
+      <img src="profile.jpg" alt="Mulusew Andualem Asemahagn" class="brand-avatar" />
+      <span class="brand-name">Mulusew Andualem ASEMAHAGN</span>
+    </div>
 
-      <!-- Dropdown Items -->
-      <li class="nav-item dropdown">
-        <a href="#about" class="nav-link">About Me <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Professional Experience</a></li>
-          <li><a href="#expertise">Areas of Expertise</a></li>
-        </ul>
-      </li>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <!-- Home (Active Link) -->
+        <li class="nav-item active">
+          <a href="#home" class="nav-link">Home <span class="arrow">▼</span></a>
+        </li>
 
-      <li class="nav-item dropdown">
-        <a href="#research" class="nav-link">Research & Publications <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#interests">Research Interests</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#reports">Reports</a></li>
-        </ul>
-      </li>
+        <!-- About Me Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#about" class="nav-link">About Me <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience-summary">Professional Experience</a></li>
+            <li><a href="#expertise">Areas of Expertise</a></li>
+          </ul>
+        </li>
 
-      <li class="nav-item dropdown">
-        <a href="#experience" class="nav-link">Professional Experience <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#organizations">Organizations</a></li>
-          <li><a href="#positions">Positions & Responsibilities</a></li>
-        </ul>
-      </li>
+        <!-- Research & Publications Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#research" class="nav-link">Research & Publications <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#interests">Research Interests</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects-list">Projects</a></li>
+            <li><a href="#reports">Reports</a></li>
+          </ul>
+        </li>
 
-      <li class="nav-item dropdown">
-        <a href="#projects" class="nav-link">Projects <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#digital-health">Digital Health</a></li>
-          <li><a href="#ai">AI</a></li>
-          <li><a href="#lab-medicine">Laboratory Medicine</a></li>
-          <li><a href="#health-research">Health Research</a></li>
-        </ul>
-      </li>
+        <!-- Professional Experience Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#experience" class="nav-link">Professional Experience <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#organizations">Organizations</a></li>
+            <li><a href="#positions">Positions</a></li>
+            <li><a href="#responsibilities">Major Responsibilities</a></li>
+          </ul>
+        </li>
 
-      <li class="nav-item">
-        <a href="#cv" class="nav-link">CV</a>
-      </li>
+        <!-- Projects Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="#projects" class="nav-link">Projects <span class="arrow">▼</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#digital-health">Digital Health</a></li>
+            <li><a href="#ai">AI</a></li>
+            <li><a href="#lab-medicine">Laboratory Medicine</a></li>
+            <li><a href="#health-research">Health Research</a></li>
+            <li><a href="#other-projects">Other Projects</a></li>
+          </ul>
+        </li>
 
-      <li class="nav-item">
-        <a href="#contact" class="nav-link">Contact</a>
-      </li>
-    </ul>
-    /* Reset & Base Header Styles */
-.site-header {
-  background-color: #0d274d; /* Dark navy color matching your reference */
+        <!-- CV Item -->
+        <li class="nav-item">
+          <a href="#cv" class="nav-link">CV</a>
+        </li>
+
+        <!-- Contact Item -->
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT SECTIONS -->
+  <main class="content-container">
+    <section id="home">
+      <h1>Welcome to My Website</h1>
+      <p>Short introduction and summary of your background, research, and leadership roles.</p>
+    </section>
+
+    <!-- Additional content sections go here -->
+  </main>
+
+</body>
+</html>
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Header Container */
+.site-header {
+  background-color: #0d274d; /* Dark navy primary color */
   width: 100%;
 }
 
-/* Branding Bar (Avatar + Name) */
+/* Top Branding Bar (Image + Name) */
 .brand-bar {
   display: flex;
   align-items: center;
@@ -73,22 +119,22 @@
 }
 
 .brand-avatar {
-  width: 42px;
-  height: 42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .brand-name {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
-/* Navigation Container */
+/* Navbar Container */
 .navbar {
   background-color: #0d274d;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -96,13 +142,11 @@
 
 .nav-menu {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Navigation Items */
+/* Individual Navigation Links */
 .nav-item {
   position: relative;
 }
@@ -112,7 +156,7 @@
   align-items: center;
   gap: 6px;
   padding: 14px 20px;
-  color: #d1d5db;
+  color: #e2e8f0;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -121,11 +165,11 @@
 }
 
 .arrow {
-  font-size: 0.65rem;
-  opacity: 0.8;
+  font-size: 0.6rem;
+  opacity: 0.7;
 }
 
-/* Hover & Active States */
+/* Hover & Active States (Teal Indicator Line) */
 .nav-link:hover {
   background-color: #1a3866;
   color: #ffffff;
@@ -134,10 +178,10 @@
 .nav-item.active .nav-link {
   background-color: #1e3d6b;
   color: #ffffff;
-  border-bottom: 4px solid #10b981; /* Teal line at the bottom of active item */
+  border-bottom: 4px solid #10b981; /* Teal bar matching your image */
 }
 
-/* Dropdown Menus */
+/* Dropdown Submenus */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -147,17 +191,16 @@
   min-width: 220px;
   list-style: none;
   padding: 8px 0;
-  margin: 0;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
   z-index: 1000;
 }
 
 .dropdown-menu li a {
   display: block;
   padding: 10px 18px;
-  color: #d1d5db;
+  color: #cbd5e1;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   transition: background-color 0.2s ease;
 }
 
@@ -166,10 +209,14 @@
   color: #ffffff;
 }
 
-/* Show Dropdown on Hover */
+/* Trigger Submenu on Hover */
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
-    
-  </nav>
-</header>
+
+/* Main Content Area */
+.content-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
