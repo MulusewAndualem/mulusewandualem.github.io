@@ -1,446 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mulusew Andualem Asemahagn | Academic & Research Portfolio</title>
-  <!-- FontAwesome Icons & Academicons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulusew Andualem Asemahagn, PhD</title>
   <style>
-    /* Reset & Base Layout */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9fbfd;
+    }
 
-    /* Header Navigation */
-  <nav>
-  <ul>
-    <li><a href="#home">Home ▼</a></li>
+    /* Header & Navigation */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1e293b;
+    }
+
+    /* Dropdown Navbar Layout */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 5px;
+    }
+    nav li {
+      position: relative;
+    }
+    nav a {
+      display: block;
+      padding: 8px 14px;
+      text-decoration: none;
+      color: #475569;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover {
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+
+    /* Dropdown Submenu */
+    nav ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 220px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 0;
+      flex-direction: column;
+      gap: 0;
+    }
+    nav ul ul li {
+      width: 100%;
+    }
+    nav ul ul a {
+      border-radius: 0;
+      padding: 8px 16px;
+      font-weight: 400;
+    }
+    nav ul ul a:hover {
+      background-color: #f8fafc;
+    }
     
-    <!-- About Me Dropdown with CV added -->
-    <li>
-      <a href="#about">About Me ▼</a>
-      <ul>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Professional Experience</a></li>
-        <li><a href="#expertise">Areas of Expertise</a></li>
-        <li><a href="#cv">CV</a></li>
-      </ul>
-    </li>
+    /* Reveal Submenu on Hover */
+    nav li:hover > ul {
+      display: flex;
+    }
 
-    <!-- Independent Menu Item -->
-    <li><a href="#independent">Independent</a></li>
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #475569;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    .profile-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .profile-links a {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 20px;
+      color: #334155;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .profile-links a:hover {
+      border-color: #0284c7;
+      color: #0284c7;
+    }
 
-    <li>
-      <a href="#services">Community &amp; Professional Services ▼</a>
-      <ul>
-        <li><a href="#community-services">Community Services</a></li>
-        <li><a href="#professional-services">Professional Services</a></li>
-        <li><a href="#professional-membership">Professional Membership</a></li>
-      </ul>
-    </li>
+    /* Metrics Grid */
+    .metrics {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .metric-card {
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0284c7;
+    }
+    .metric-label {
+      color: #64748b;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    .metric-card a {
+      color: #0284c7;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
 
-    <li>
-      <a href="#publications">Research &amp; Publications ▼</a>
-      <ul>
-        <li><a href="#journals">Journal Articles</a></li>
-        <li><a href="#books">Books</a></li>
-        <li><a href="#policy-briefs">Policy Briefs</a></li>
-        <li><a href="#issue-briefs">Issue Briefs</a></li>
-        <li><a href="#technical-briefs">Technical Briefs</a></li>
-        <li><a href="#translated-works">Translated into Local Language</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#projects">Research Projects ▼</a>
-      <ul>
-        <li><a href="#internal-projects">Internal Projects</a></li>
-        <li><a href="#external-projects">External Projects</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-    /* Hero Banner */
-    <section id="home">
-  <h1>Mulusew Andualem Asemahagn, PhD</h1>
-  <p>Corporate Director of Research &amp; Community Engagement | College of Medicine and Health Sciences | Bahir Dar University</p>
-  
-  <div>
-    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">
-      <i></i> Google Scholar
-    </a>
-    <a href="https://orcid.org/0000-0002-0345-9437" target="_blank">
-      <i></i> ORCID
-    </a>
-    <a href="https://www.researchgate.net/profile/Mulusew-Asemahagn" target="_blank">
-      <i></i> ResearchGate
-    </a>
-    <a href="https://www.adscientificindex.com/scientist/mulusew-andualem-asemahagn/95242" target="_blank">
-      <i></i> AD Scientific Index
-    </a>
-  </div>
-</section>
-
-    /* Profile Link Badges */
-    .profile-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
-    .badge-btn { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.1); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; transition: background 0.2s ease; }
-    .badge-btn:hover { background: #10b981; border-color: #10b981; color: #ffffff; }
-
-    /* Live Citation Metrics Bar */
-    <div class="metrics-container">
-  <div>
-    <div>75+</div>
-    <div>Publications</div>
-    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">View List →</a>
-  </div>
-  <div>
-    <div>2,700+</div>
-    <div>Total Citations</div>
-    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Google Scholar →</a>
-  </div>
-  <!-- Updated h-index card link to Google Scholar -->
-  <div>
-    <div>25+</div>
-    <div>h-index</div>
-    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Google Scholar →</a>
-  </div>
-  <div>
-    <div>40+</div>
-    <div>i10-index</div>
-    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Track Updates →</a>
-  </div>
-</div>om: 10px; display: flex; align-items: center; justify-content: space-between; }
-
-    /* News, Events & Gallery Grid (Directly below Metrics) */
-    .media-events-section { margin-bottom: 50px; }
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 30px; }
-    .card { background: #ffffff; border-radius: 10px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .card-body { padding: 20px; }
-    .card-tag { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin-bottom: 10px; text-transform: uppercase; }
-    .card-title { font-size: 1.1rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
-    .card-desc { font-size: 0.88rem; color: #475569; }
-
-    /* Publications List & Badges */
-    .pub-card { background: #ffffff; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .pub-type-badge { display: inline-block; background: #f1f5f9; color: #334155; font-size: 0.75rem; font-weight: 600; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; border: 1px solid #cbd5e1; }
-    .pub-title { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
-    .pub-authors { font-size: 0.88rem; color: #475569; margin-bottom: 6px; }
-    .pub-journal { font-size: 0.85rem; color: #0284c7; font-style: italic; margin-bottom: 12px; }
-    .pub-btn { display: inline-flex; align-items: center; gap: 6px; background: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1; padding: 6px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
-    .pub-btn:hover { background: #0d274d; color: #ffffff; border-color: #0d274d; }
-
-    /* Contact Details Grid */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-    .contact-card { background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 16px; }
-    .contact-icon { font-size: 1.5rem; color: #0284c7; width: 40px; text-align: center; }
-    .contact-label { font-size: 0.8rem; color: #64748b; font-weight: 600; text-transform: uppercase; }
-    .contact-value { font-size: 0.95rem; font-weight: 600; color: #0f172a; }
-
-    footer { background: #0d274d; color: #94a3b8; text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; }
+    /* Main Container */
+    .content-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    section h2 {
+      margin-bottom: 16px;
+      color: #0f172a;
+      border-bottom: 2px solid #f1f5f9;
+      padding-bottom: 8px;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 0.9rem;
+      border-top: 1px solid #e2e8f0;
+      background: #ffffff;
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER NAVBAR -->
-  <header class="site-header">
-    <div class="brand-bar">
-      <img src="profile.jpg" alt="Mulusew Andualem Asemahagn" class="brand-avatar" onerror="this.style.display='none'" />
-      <span class="brand-name">Mulusew Andualem Asemahagn</span>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="header-container">
+      <div class="brand-name">Mulusew Andualem Asemahagn</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home ▼</a></li>
+          
+          <!-- About Me Dropdown -->
+          <li>
+            <a href="#about">About Me ▼</a>
+            <ul>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#experience">Professional Experience</a></li>
+              <li><a href="#expertise">Areas of Expertise</a></li>
+              <li><a href="#cv">CV</a></li>
+            </ul>
+          </li>
+
+          <!-- Independent Menu Link -->
+          <li><a href="#independent">Independent</a></li>
+
+          <!-- Services Dropdown -->
+          <li>
+            <a href="#services">Services ▼</a>
+            <ul>
+              <li><a href="#community-services">Community Services</a></li>
+              <li><a href="#professional-services">Professional Services</a></li>
+              <li><a href="#professional-membership">Professional Membership</a></li>
+            </ul>
+          </li>
+
+          <!-- Publications Dropdown -->
+          <li>
+            <a href="#publications">Publications ▼</a>
+            <ul>
+              <li><a href="#journals">Journal Articles</a></li>
+              <li><a href="#books">Books</a></li>
+              <li><a href="#policy-briefs">Policy Briefs</a></li>
+              <li><a href="#issue-briefs">Issue Briefs</a></li>
+              <li><a href="#technical-briefs">Technical Briefs</a></li>
+              <li><a href="#translated-works">Translated into Local Language</a></li>
+            </ul>
+          </li>
+
+          <!-- Projects Dropdown -->
+          <li>
+            <a href="#projects">Projects ▼</a>
+            <ul>
+              <li><a href="#internal-projects">Internal Projects</a></li>
+              <li><a href="#external-projects">External Projects</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <nav class="navbar">
-      <ul class="nav-menu">
-        <li class="nav-item active"><a href="#home" class="nav-link">Home ▼</a></li>
-        
-        <li class="nav-item dropdown">
-          <a href="#about" class="nav-link">About Me ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Professional Experience</a></li>
-            <li><a href="#expertise">Areas of Expertise</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a href="#services" class="nav-link">Community & Professional Services ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="#community-services">Community Services</a></li>
-            <li><a href="#professional-services">Professional Services</a></li>
-            <li><a href="#professional-membership">Professional Membership</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a href="#publications" class="nav-link">Research & Publications ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="#journals">Journal Articles</a></li>
-            <li><a href="#books">Books</a></li>
-            <li><a href="#policy-briefs">Policy Briefs</a></li>
-            <li><a href="#issue-briefs">Issue Briefs</a></li>
-            <li><a href="#technical-briefs">Technical Briefs</a></li>
-            <li><a href="#translated-works">Translated into Local Language</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a href="#projects" class="nav-link">Research Projects ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="#internal-projects">Internal Projects</a></li>
-            <li><a href="#external-projects">External Projects</a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-section" id="home">
-    <h1 class="hero-title">Mulusew Andualem Asemahagn, PhD</h1>
-    <p class="hero-subtitle">Corporate Director of Research & Community Engagement | Bahir Dar University</p>
+  <!-- Hero Header -->
+  <section class="hero" id="home">
+    <h1>Mulusew Andualem Asemahagn, PhD</h1>
+    <p>Corporate Director of Research & Community Engagement | College of Medicine and Health Sciences | Bahir Dar University</p>
     
-    <!-- ACADEMIC PROFILE LINKS -->
-    <div class="profile-badges">
-      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank" class="badge-btn">
-        <i class="ai ai-google-scholar"></i> Google Scholar
-      </a>
-      <a href="https://orcid.org/0000-0002-0345-9437" target="_blank" class="badge-btn">
-        <i class="ai ai-orcid"></i> ORCID
-      </a>
-      <a href="https://www.researchgate.net/profile/Mulusew-Asemahagn" target="_blank" class="badge-btn">
-        <i class="ai ai-researchgate"></i> ResearchGate
-      </a>
-      <a href="https://www.adscientificindex.com/scientist/mulusew-andualem-asemahagn/95242" target="_blank" class="badge-btn">
-        <i class="fa-solid fa-chart-line"></i> AD Scientific Index
-      </a>
+    <div class="profile-links">
+      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">Google Scholar</a>
+      <a href="https://orcid.org/0000-0002-0345-9437" target="_blank">ORCID</a>
+      <a href="https://www.researchgate.net/profile/Mulusew-Asemahagn" target="_blank">ResearchGate</a>
+      <a href="https://www.adscientificindex.com/scientist/mulusew-andualem-asemahagn/95242" target="_blank">AD Scientific Index</a>
     </div>
   </section>
 
-  <!-- CITATIONS & INDEX METRICS BAR -->
-  <div class="metrics-bar" id="metrics">
-    <div>
-      <div class="metric-number">75+</div>
+  <!-- Key Metrics -->
+  <div class="metrics">
+    <div class="metric-card">
+      <div class="metric-value">75+</div>
       <div class="metric-label">Publications</div>
-      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank" class="metric-link">View List &rarr;</a>
+      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">View List →</a>
     </div>
-    <div>
-      <div class="metric-number">2,700+</div>
+    <div class="metric-card">
+      <div class="metric-value">2,700+</div>
       <div class="metric-label">Total Citations</div>
-      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank" class="metric-link">Google Scholar &rarr;</a>
+      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">Google Scholar →</a>
     </div>
-    <div>
-      <div class="metric-number">25+</div>
+    <div class="metric-card">
+      <div class="metric-value">25+</div>
       <div class="metric-label">h-index</div>
-      <a href="https://www.adscientificindex.com/scientist/mulusew-andualem-asemahagn/95242" target="_blank" class="metric-link">AD Scientific &rarr;</a>
+      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">Google Scholar →</a>
     </div>
-    <div>
-      <div class="metric-number">40+</div>
+    <div class="metric-card">
+      <div class="metric-value">40+</div>
       <div class="metric-label">i10-index</div>
-      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank" class="metric-link">Track Updates &rarr;</a>
+      <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">Track Updates →</a>
     </div>
   </div>
 
-  <div class="container">
-
-    <!-- GALLERY / EVENTS / NEWS SECTION (Immediately below Metrics) -->
-    <section class="media-events-section" id="events-gallery">
-      <div class="section-title">
-        <h2><i class="fa-solid fa-calendar-check"></i> Events, News & Gallery</h2>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-body">
-            <span class="card-tag">News</span>
-            <h3 class="card-title">Institutional Mentoring Program (IMP 2026)</h3>
-            <p class="card-desc">Strengthening research ethics and IRB systems at Bahir Dar University in partnership with AAU-JHU.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-body">
-            <span class="card-tag">Event</span>
-            <h3 class="card-title">Green Legacy Initiative</h3>
-            <p class="card-desc">Tree-planting initiative organized by Tibebe Ghion Specialized Hospital and Bahir Dar University.</p>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-body">
-            <span class="card-tag">Gallery / Workshop</span>
-            <h3 class="card-title">Dissemination Workshop</h3>
-            <p class="card-desc">Lifting up Young Female Entrepreneurs project dissemination workshop session at Bahir Dar University.</p>
-          </div>
-        </article>
-      </div>
+  <!-- Content Sections -->
+  <div class="content-container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome to my personal page. Use the navigation menu above to view my educational background, professional experience, research publications, and project involvements.</p>
     </section>
 
-    <!-- RESEARCH & PUBLICATIONS SECTION -->
-    <section id="publications" style="margin-bottom: 50px;">
-      <div class="section-title">
-        <h2><i class="fa-solid fa-book-bookmark"></i> Research & Publications</h2>
-      </div>
-
-      <!-- Journal Item -->
-      <div class="pub-card" id="journals">
-        <span class="pub-type-badge">Journal Article</span>
-        <div class="pub-title">Global, regional, and national burden of HIV/AIDS, 1990–2021, and forecasts to 2050: the Global Burden of Disease Study 2021</div>
-        <div class="pub-authors">GBD 2021 HIV Collaborators, Mulusew Andualem Asemahagn, et al.</div>
-        <div class="pub-journal">The Lancet HIV (2024)</div>
-        <a href="https://doi.org/10.1016/S2352-3018(24)00223-8" target="_blank" class="pub-btn">
-          <i class="fa-solid fa-arrow-up-right-from-square"></i> Publisher DOI
-        </a>
-      </div>
-
-      <!-- Policy Brief Category -->
-      <div class="pub-card" id="policy-briefs">
-        <span class="pub-type-badge">Policy Brief</span>
-        <div class="pub-title">Strengthening Sub-national Health Informatics & Governance in Amhara Region</div>
-        <div class="pub-authors">Mulusew Andualem Asemahagn</div>
-        <div class="pub-journal">Bahir Dar University Policy Brief Series</div>
-      </div>
-
-      <!-- Technical Brief Category -->
-      <div class="pub-card" id="technical-briefs">
-        <span class="pub-type-badge">Technical Brief</span>
-        <div class="pub-title">Implementation Guidelines for Research Innovation and Information Management Systems (RIIMS)</div>
-        <div class="pub-authors">Mulusew Andualem Asemahagn</div>
-        <div class="pub-journal">Corporate Directorate of Research & Community Engagement</div>
-      </div>
-
-      <!-- Local Language Category -->
-      <div class="pub-card" id="translated-works">
-        <span class="pub-type-badge">Translated into Local Language</span>
-        <div class="pub-title">Community Health Metrics & Disease Prevention Guidelines (Amharic Translation)</div>
-        <div class="pub-authors">Mulusew Andualem Asemahagn</div>
-        <div class="pub-journal">Community Engagement Manual</div>
-      </div>
+    <section id="independent">
+      <h2>Independent Work</h2>
+      <p>Details regarding independent research consultations, projects, and advisory work.</p>
     </section>
 
-    <!-- RESEARCH PROJECTS SECTION -->
-    <section id="projects" style="margin-bottom: 50px;">
-      <div class="section-title">
-        <h2><i class="fa-solid fa-diagram-project"></i> Research Projects</h2>
-      </div>
-
-      <div class="card-grid">
-        <div class="card" id="internal-projects">
-          <div class="card-body">
-            <span class="card-tag">Internal Project</span>
-            <h3 class="card-title">Institute of Public Health Establishment</h3>
-            <p class="card-desc">Institutional initiative under CMHS to expand public health research and postgraduate education at Bahir Dar University.</p>
-          </div>
-        </div>
-
-        <div class="card" id="external-projects">
-          <div class="card-body">
-            <span class="card-tag">External Project</span>
-            <h3 class="card-title">PReSERVE-BDU Center</h3>
-            <p class="card-desc">Collaborative research service center initiative in partnership with RTI International.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- COMMUNITY & PROFESSIONAL SERVICES -->
-    <section id="services" style="margin-bottom: 50px;">
-      <div class="section-title">
-        <h2><i class="fa-solid fa-handshake-angle"></i> Community & Professional Services</h2>
-      </div>
-
-      <div class="pub-card" id="community-services">
-        <h3 class="pub-title">Community Services</h3>
-        <p class="card-desc">Leading regional public health initiatives, community health surveillance outreach programs, and local capacity-building workshops.</p>
-      </div>
-
-      <div class="pub-card" id="professional-services">
-        <h3 class="pub-title">Professional Services</h3>
-        <p class="card-desc">Corporate Directorate of Research & Community Engagement leadership; peer review for international public health journals; institutional ethics committee supervision.</p>
-      </div>
-
-      <div class="pub-card" id="professional-membership">
-        <h3 class="pub-title">Professional Membership</h3>
-        <p class="card-desc">African Population Cohorts Consortium (APCC) Ethics Committee Representative; Health and Wellbeing Across the Life Span (HWLS) Executive Group.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT MENU & DETAILS -->
     <section id="contact">
-      <div class="section-title">
-        <h2><i class="fa-solid fa-address-book"></i> Contact & Profiles</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card">
-          <i class="fa-solid fa-envelope contact-icon"></i>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value"><a href="mailto:muluandualem@gmail.com">muluandualem@gmail.com</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="fa-solid fa-globe contact-icon"></i>
-          <div>
-            <div class="contact-label">Official Website</div>
-            <div class="contact-value"><a href="https://bdu.edu.et" target="_blank">bdu.edu.et</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="fa-brands fa-linkedin contact-icon"></i>
-          <div>
-            <div class="contact-label">LinkedIn</div>
-            <div class="contact-value"><a href="https://linkedin.com" target="_blank">LinkedIn Profile</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="ai ai-google-scholar contact-icon"></i>
-          <div>
-            <div class="contact-label">Google Scholar</div>
-            <div class="contact-value"><a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&hl=en" target="_blank">Scholar Profile</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="ai ai-researchgate contact-icon"></i>
-          <div>
-            <div class="contact-label">ResearchGate</div>
-            <div class="contact-value"><a href="https://www.researchgate.net/profile/Mulusew-Asemahagn" target="_blank">ResearchGate Profile</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="ai ai-orcid contact-icon"></i>
-          <div>
-            <div class="contact-label">ORCID</div>
-            <div class="contact-value"><a href="https://orcid.org/0000-0002-0345-9437" target="_blank">0000-0002-0345-9437</a></div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <i class="fa-solid fa-database contact-icon"></i>
-          <div>
-            <div class="contact-label">RPMS / RIIMS</div>
-            <div class="contact-value">Bahir Dar University Research System</div>
-          </div>
-        </div>
-      </div>
+      <h2>Contact Information</h2>
+      <p>Email: <a href="mailto:muluandualem@gmail.com">muluandualem@gmail.com</a></p>
+      <p>Institution: Bahir Dar University, College of Medicine and Health Sciences</p>
     </section>
-
   </div>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Mulusew Andualem Asemahagn. All Rights Reserved.</p>
+    <p>© 2026 Mulusew Andualem Asemahagn. All Rights Reserved.</p>
   </footer>
 
 </body>
