@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mulusew Andualem Asemahagn, PhD</title>
   <style>
-    /* Global Styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -70,7 +69,7 @@
       top: 100%;
       left: 0;
       background: #ffffff;
-      min-width: 220px;
+      min-width: 240px;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       border: 1px solid #e2e8f0;
       border-radius: 6px;
@@ -98,25 +97,34 @@
     /* Hero Section */
     .hero {
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 50px 20px 30px;
       background: #ffffff;
       border-bottom: 1px solid #e2e8f0;
     }
+    .hero img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 16px;
+      border: 3px solid #0284c7;
+    }
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       color: #0f172a;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .hero p {
       font-size: 1.05rem;
       color: #475569;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto 20px;
+      font-weight: 500;
     }
     .profile-links {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
     }
     .profile-links a {
@@ -124,19 +132,21 @@
       padding: 6px 14px;
       border: 1px solid #cbd5e1;
       border-radius: 20px;
-      color: #334155;
+      color: #0284c7;
       text-decoration: none;
       font-size: 0.9rem;
+      font-weight: 500;
     }
     .profile-links a:hover {
+      background-color: #0284c7;
+      color: #ffffff;
       border-color: #0284c7;
-      color: #0284c7;
     }
 
     /* Metrics Grid */
     .metrics {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 30px auto;
       padding: 0 20px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -144,7 +154,7 @@
     }
     .metric-card {
       background: #ffffff;
-      padding: 24px;
+      padding: 20px;
       border-radius: 8px;
       border: 1px solid #e2e8f0;
       text-align: center;
@@ -157,7 +167,7 @@
     .metric-label {
       color: #64748b;
       font-size: 0.95rem;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .metric-card a {
       color: #0284c7;
@@ -170,7 +180,7 @@
     .content-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 0 20px 40px;
     }
     section {
       background: #ffffff;
@@ -184,6 +194,32 @@
       color: #0f172a;
       border-bottom: 2px solid #f1f5f9;
       padding-bottom: 8px;
+    }
+    .item-card {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .item-card:last-child {
+      border-bottom: none;
+    }
+    .badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .item-title {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .item-desc {
+      color: #64748b;
+      font-size: 0.95rem;
     }
     
     footer {
@@ -260,6 +296,7 @@
 
   <!-- Hero Header -->
   <section class="hero" id="home">
+    <img src="profile.jpg" alt="Mulusew Andualem Asemahagn">
     <h1>Mulusew Andualem Asemahagn, PhD</h1>
     <p>Corporate Director of Research & Community Engagement | College of Medicine and Health Sciences | Bahir Dar University</p>
     
@@ -271,7 +308,7 @@
     </div>
   </section>
 
-  <!-- Key Metrics -->
+  <!-- Metrics Grid -->
   <div class="metrics">
     <div class="metric-card">
       <div class="metric-value">75+</div>
@@ -299,18 +336,92 @@
   <div class="content-container">
     <section id="about">
       <h2>About Me</h2>
-      <p>Welcome to my personal page. Use the navigation menu above to view my educational background, professional experience, research publications, and project involvements.</p>
+      <p id="education"><strong>Education:</strong> PhD in Public Health/Health Informatics.</p>
+      <p id="experience" style="margin-top: 10px;"><strong>Professional Experience:</strong> Corporate Director of Research & Community Engagement at the College of Medicine and Health Sciences, Bahir Dar University.</p>
+      <p id="expertise" style="margin-top: 10px;"><strong>Areas of Expertise:</strong> Public Health Metrics, Health Information Systems, Epidemiological Surveillance, and Ethics Systems.</p>
+      <p id="cv" style="margin-top: 10px;"><strong>CV:</strong> <a href="#" style="color: #0284c7;">Download Full Curriculum Vitae (PDF)</a></p>
     </section>
 
     <section id="independent">
       <h2>Independent Work</h2>
-      <p>Details regarding independent research consultations, projects, and advisory work.</p>
+      <p>Details regarding independent research consultations, external advisory positions, and scientific evaluations.</p>
+    </section>
+
+    <section id="news">
+      <h2>Events, News & Gallery</h2>
+      <div class="item-card">
+        <span class="badge">News</span>
+        <div class="item-title">Institutional Mentoring Program (IMP 2026)</div>
+        <div class="item-desc">Strengthening research ethics and IRB systems at Bahir Dar University in partnership with AAU-JHU.</div>
+      </div>
+      <div class="item-card">
+        <span class="badge">Event</span>
+        <div class="item-title">Green Legacy Initiative</div>
+        <div class="item-desc">Tree-planting initiative organized by Tibebe Ghion Specialized Hospital and Bahir Dar University.</div>
+      </div>
+      <div class="item-card">
+        <span class="badge">Workshop</span>
+        <div class="item-title">Dissemination Workshop</div>
+        <div class="item-desc">Lifting up Young Female Entrepreneurs project dissemination workshop session at Bahir Dar University.</div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Research & Publications</h2>
+      <div id="journals" class="item-card">
+        <span class="badge">Journal Article</span>
+        <div class="item-title">Global, regional, and national burden of HIV/AIDS, 1990–2021, and forecasts to 2050: the Global Burden of Disease Study 2021</div>
+        <div class="item-desc">The Lancet HIV (2024) | <a href="https://doi.org/10.1016/S2352-3018(24)00223-8" target="_blank" style="color: #0284c7;">Publisher DOI</a></div>
+      </div>
+      <div id="policy-briefs" class="item-card">
+        <span class="badge">Policy Brief</span>
+        <div class="item-title">Strengthening Sub-national Health Informatics & Governance in Amhara Region</div>
+        <div class="item-desc">Bahir Dar University Policy Brief Series</div>
+      </div>
+      <div id="technical-briefs" class="item-card">
+        <span class="badge">Technical Brief</span>
+        <div class="item-title">Implementation Guidelines for Research Innovation and Information Management Systems (RIIMS)</div>
+        <div class="item-desc">Corporate Directorate of Research & Community Engagement</div>
+      </div>
+      <div id="translated-works" class="item-card">
+        <span class="badge">Translated Work</span>
+        <div class="item-title">Community Health Metrics & Disease Prevention Guidelines (Amharic Translation)</div>
+        <div class="item-desc">Community Engagement Manual</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Research Projects</h2>
+      <div id="internal-projects" class="item-card">
+        <span class="badge">Internal Project</span>
+        <div class="item-title">Institute of Public Health Establishment</div>
+        <div class="item-desc">Institutional initiative under CMHS to expand public health research and postgraduate education at Bahir Dar University.</div>
+      </div>
+      <div id="external-projects" class="item-card">
+        <span class="badge">External Project</span>
+        <div class="item-title">PReSERVE-BDU Center</div>
+        <div class="item-desc">Collaborative research service center initiative in partnership with RTI International.</div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Community & Professional Services</h2>
+      <div id="community-services" style="margin-bottom: 12px;">
+        <strong>Community Services:</strong> Leading regional public health initiatives, community health surveillance outreach programs, and local capacity-building workshops.
+      </div>
+      <div id="professional-services" style="margin-bottom: 12px;">
+        <strong>Professional Services:</strong> Corporate Directorate leadership; peer review for international public health journals; institutional ethics committee supervision.
+      </div>
+      <div id="professional-membership">
+        <strong>Professional Membership:</strong> African Population Cohorts Consortium (APCC) Ethics Committee Representative; Health and Wellbeing Across the Life Span (HWLS) Executive Group.
+      </div>
     </section>
 
     <section id="contact">
       <h2>Contact Information</h2>
-      <p>Email: <a href="mailto:muluandualem@gmail.com">muluandualem@gmail.com</a></p>
+      <p>Email: <a href="mailto:muluandualem@gmail.com" style="color: #0284c7;">muluandualem@gmail.com</a></p>
       <p>Institution: Bahir Dar University, College of Medicine and Health Sciences</p>
+      <p>Official Website: <a href="https://bdu.edu.et" target="_blank" style="color: #0284c7;">bdu.edu.et</a></p>
     </section>
   </div>
 
