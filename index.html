@@ -15,29 +15,77 @@
     a { text-decoration: none; color: inherit; }
 
     /* Header Navigation */
-    .site-header { background-color: #0d274d; width: 100%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-    .brand-bar { display: flex; align-items: center; padding: 12px 24px; }
-    .brand-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; margin-right: 12px; border: 2px solid rgba(255, 255, 255, 0.4); }
-    .brand-name { color: #ffffff; font-size: 1.25rem; font-weight: 700; }
+  <nav>
+  <ul>
+    <li><a href="#home">Home ▼</a></li>
+    
+    <!-- About Me Dropdown with CV added -->
+    <li>
+      <a href="#about">About Me ▼</a>
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Professional Experience</a></li>
+        <li><a href="#expertise">Areas of Expertise</a></li>
+        <li><a href="#cv">CV</a></li>
+      </ul>
+    </li>
 
-    .navbar { background-color: #0d274d; border-top: 1px solid rgba(255, 255, 255, 0.08); }
-    .nav-menu { list-style: none; display: flex; flex-wrap: wrap; }
-    .nav-item { position: relative; }
-    .nav-link { display: flex; align-items: center; gap: 6px; padding: 14px 18px; color: #e2e8f0; font-size: 0.95rem; font-weight: 500; border-bottom: 4px solid transparent; white-space: nowrap; }
-    .nav-link:hover { background-color: #1a3866; color: #ffffff; }
-    .nav-item.active .nav-link { background-color: #1e3d6b; color: #ffffff; border-bottom: 4px solid #10b981; }
+    <!-- Independent Menu Item -->
+    <li><a href="#independent">Independent</a></li>
 
-    /* Dropdown Menus */
-    .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background-color: #0d274d; min-width: 260px; list-style: none; padding: 8px 0; box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25); z-index: 1000; }
-    .dropdown-menu li a { display: block; padding: 10px 18px; color: #cbd5e1; font-size: 0.88rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .dropdown-menu li a:hover { background-color: #1a3866; color: #ffffff; }
-    .nav-item.dropdown:hover .dropdown-menu { display: block; }
+    <li>
+      <a href="#services">Community &amp; Professional Services ▼</a>
+      <ul>
+        <li><a href="#community-services">Community Services</a></li>
+        <li><a href="#professional-services">Professional Services</a></li>
+        <li><a href="#professional-membership">Professional Membership</a></li>
+      </ul>
+    </li>
 
+    <li>
+      <a href="#publications">Research &amp; Publications ▼</a>
+      <ul>
+        <li><a href="#journals">Journal Articles</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="#policy-briefs">Policy Briefs</a></li>
+        <li><a href="#issue-briefs">Issue Briefs</a></li>
+        <li><a href="#technical-briefs">Technical Briefs</a></li>
+        <li><a href="#translated-works">Translated into Local Language</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#projects">Research Projects ▼</a>
+      <ul>
+        <li><a href="#internal-projects">Internal Projects</a></li>
+        <li><a href="#external-projects">External Projects</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
     /* Hero Banner */
-    .hero-section { background: linear-gradient(135deg, #0d274d 0%, #1e3d6b 100%); color: white; padding: 50px 20px 70px; text-align: center; }
-    .hero-title { font-size: 2.3rem; margin-bottom: 10px; font-weight: 700; }
-    .hero-subtitle { font-size: 1.15rem; color: #38bdf8; margin-bottom: 20px; font-weight: 500; }
-    <img src="profile.jpg" alt="Mulusew Andualem Asemahagn" class="brand-avatar" />
+    <section id="home">
+  <h1>Mulusew Andualem Asemahagn, PhD</h1>
+  <p>Corporate Director of Research &amp; Community Engagement | College of Medicine and Health Sciences | Bahir Dar University</p>
+  
+  <div>
+    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">
+      <i></i> Google Scholar
+    </a>
+    <a href="https://orcid.org/0000-0002-0345-9437" target="_blank">
+      <i></i> ORCID
+    </a>
+    <a href="https://www.researchgate.net/profile/Mulusew-Asemahagn" target="_blank">
+      <i></i> ResearchGate
+    </a>
+    <a href="https://www.adscientificindex.com/scientist/mulusew-andualem-asemahagn/95242" target="_blank">
+      <i></i> AD Scientific Index
+    </a>
+  </div>
+</section>
 
     /* Profile Link Badges */
     .profile-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
@@ -45,14 +93,29 @@
     .badge-btn:hover { background: #10b981; border-color: #10b981; color: #ffffff; }
 
     /* Live Citation Metrics Bar */
-    .metrics-bar { background: #ffffff; margin: -35px auto 30px; max-width: 1100px; border-radius: 12px; padding: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); text-align: center; position: relative; z-index: 10; border: 1px solid #e2e8f0; }
-    .metric-number { font-size: 2.2rem; font-weight: 800; color: #0d274d; }
-    .metric-label { font-size: 0.85rem; color: #64748b; text-transform: uppercase; font-weight: 600; margin-top: 4px; }
-    .metric-link { display: inline-block; margin-top: 6px; font-size: 0.75rem; color: #0284c7; font-weight: 600; }
-
-    /* Main Container & Layout */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
-    .section-title { font-size: 1.6rem; color: #0d274d; margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
+    <div class="metrics-container">
+  <div>
+    <div>75+</div>
+    <div>Publications</div>
+    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">View List →</a>
+  </div>
+  <div>
+    <div>2,700+</div>
+    <div>Total Citations</div>
+    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Google Scholar →</a>
+  </div>
+  <!-- Updated h-index card link to Google Scholar -->
+  <div>
+    <div>25+</div>
+    <div>h-index</div>
+    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Google Scholar →</a>
+  </div>
+  <div>
+    <div>40+</div>
+    <div>i10-index</div>
+    <a href="https://scholar.google.com/citations?user=nM_7s8sAAAAJ&amp;hl=en" target="_blank">Track Updates →</a>
+  </div>
+</div>om: 10px; display: flex; align-items: center; justify-content: space-between; }
 
     /* News, Events & Gallery Grid (Directly below Metrics) */
     .media-events-section { margin-bottom: 50px; }
